@@ -1,0 +1,285 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover free AI tools for writing, design, learning and video creation in one place.">
+  <title>Free AI Tools Hub</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #0b1020;
+      color: #f4f7ff;
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 38px 16px;
+      background: linear-gradient(135deg, #16213e, #37216b);
+    }
+
+    header h1 {
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      color: #d4d9f0;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 24px 16px;
+    }
+
+    .search {
+      width: 100%;
+      padding: 14px;
+      border-radius: 10px;
+      border: 1px solid #39445f;
+      background: #151d32;
+      color: white;
+      font-size: 16px;
+      margin-bottom: 16px;
+    }
+
+    .filters {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+
+    .filters button {
+      background: #202b45;
+      color: white;
+      border: 1px solid #3a4867;
+      border-radius: 20px;
+      padding: 9px 14px;
+      cursor: pointer;
+    }
+
+    .filters button.active,
+    .filters button:hover {
+      background: #7455e8;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      background: #151d32;
+      border: 1px solid #2c3853;
+      padding: 20px;
+      border-radius: 16px;
+      transition: transform .2s, border-color .2s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: #8a72ff;
+    }
+
+    .emoji {
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+
+    .card h2 {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      color: #c0c9df;
+      font-size: 14px;
+      min-height: 48px;
+      margin-bottom: 16px;
+    }
+
+    .tag {
+      display: inline-block;
+      font-size: 12px;
+      color: #c6baff;
+      margin-bottom: 12px;
+    }
+
+    .visit {
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      background: #7455e8;
+      color: white;
+      padding: 10px;
+      border-radius: 9px;
+      font-weight: bold;
+    }
+
+    .visit:hover {
+      background: #8b72ff;
+    }
+
+    #empty {
+      display: none;
+      text-align: center;
+      padding: 30px;
+      color: #c0c9df;
+    }
+
+    footer {
+      text-align: center;
+      color: #aab5ce;
+      padding: 26px 12px;
+      margin-top: 25px;
+      border-top: 1px solid #27324a;
+    }
+
+    footer a {
+      color: #b9aaff;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🚀 Free AI Tools Hub</h1>
+    <p>Discover useful AI tools. Create more, for free!</p>
+  </header>
+
+  <main class="container">
+    <input
+      id="search"
+      class="search"
+      type="search"
+      placeholder="🔍 Search AI tools..."
+      aria-label="Search AI tools"
+    >
+
+    <div class="filters" id="filters">
+      <button class="active" data-category="all">All Tools</button>
+      <button data-category="writing">Writing</button>
+      <button data-category="design">Design</button>
+      <button data-category="video">Video</button>
+      <button data-category="study">Study</button>
+    </div>
+
+    <div class="grid" id="tools">
+
+      <article class="card" data-category="writing">
+        <div class="emoji">🤖</div>
+        <span class="tag">WRITING</span>
+        <h2>ChatGPT</h2>
+        <p>Get help with writing, ideas, explanations and learning.</p>
+        <a class="visit" href="https://chatgpt.com/" target="_blank" rel="noopener">Try ChatGPT ↗</a>
+      </article>
+
+      <article class="card" data-category="writing">
+        <div class="emoji">✨</div>
+        <span class="tag">WRITING</span>
+        <h2>Google Gemini</h2>
+        <p>Explore ideas, ask questions and get AI assistance.</p>
+        <a class="visit" href="https://gemini.google.com/" target="_blank" rel="noopener">Try Gemini ↗</a>
+      </article>
+
+      <article class="card" data-category="design">
+        <div class="emoji">🎨</div>
+        <span class="tag">DESIGN</span>
+        <h2>Canva</h2>
+        <p>Create designs, posters, presentations and thumbnails.</p>
+        <a class="visit" href="https://www.canva.com/" target="_blank" rel="noopener">Explore Canva ↗</a>
+      </article>
+
+      <article class="card" data-category="design">
+        <div class="emoji">🖼️</div>
+        <span class="tag">DESIGN</span>
+        <h2>Adobe Firefly</h2>
+        <p>Explore AI-powered image generation and creative tools.</p>
+        <a class="visit" href="https://firefly.adobe.com/" target="_blank" rel="noopener">Try Firefly ↗</a>
+      </article>
+
+      <article class="card" data-category="video">
+        <div class="emoji">🎬</div>
+        <span class="tag">VIDEO</span>
+        <h2>CapCut</h2>
+        <p>Edit videos and explore tools for creative content.</p>
+        <a class="visit" href="https://www.capcut.com/" target="_blank" rel="noopener">Explore CapCut ↗</a>
+      </article>
+
+      <article class="card" data-category="study">
+        <div class="emoji">📚</div>
+        <span class="tag">STUDY</span>
+        <h2>NotebookLM</h2>
+        <p>Study your sources, summarize information and organize notes.</p>
+        <a class="visit" href="https://notebooklm.google.com/" target="_blank" rel="noopener">Try NotebookLM ↗</a>
+      </article>
+
+    </div>
+
+    <p id="empty">No tools found. Try another search!</p>
+  </main>
+
+  <footer>
+    <p>Made with ❤️ for AI lovers</p>
+    <p>Free AI Tools Hub · 2026</p>
+    <p>Tools belong to their respective owners.
+      Features and free plans may change.</p>
+  </footer>
+
+  <script>
+    const search = document.getElementById("search");
+    const cards = document.querySelectorAll(".card");
+    const buttons = document.querySelectorAll("#filters button");
+    const empty = document.getElementById("empty");
+
+    let category = "all";
+
+    function filterTools() {
+      const query = search.value.toLowerCase().trim();
+      let visible = 0;
+
+      cards.forEach(card => {
+        const matchesText =
+          card.innerText.toLowerCase().includes(query);
+        const matchesCategory =
+          category === "all" ||
+          card.dataset.category === category;
+
+        const show = matchesText && matchesCategory;
+        card.style.display = show ? "block" : "none";
+
+        if (show) visible++;
+      });
+
+      empty.style.display = visible ? "none" : "block";
+    }
+
+    search.addEventListener("input", filterTools);
+
+    buttons.forEach(button => {
+      button.addEventListener("click", () => {
+        category = button.dataset.category;
+
+        buttons.forEach(item => {
+          item.classList.toggle("active", item === button);
+        });
+
+        filterTools();
+      });
+    });
+  </script>
+
+</body>
+  </html>
+  
